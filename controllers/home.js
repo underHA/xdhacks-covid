@@ -8,8 +8,8 @@ exports.index = (req, res) => {
   });
 };
 
-exports.escapeVelocity = (req, res) => {
-  res.render('escape-velocity', {
+exports.stellar = (req, res) => {
+  res.render('stellar', {
     title: 'Landing Page'
   });
 };
