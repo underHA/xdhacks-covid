@@ -12,7 +12,7 @@ module.exports = {
 }*/
 
 
-
+//main loop
 function intervalFunc() {
   main.organize()
 }
