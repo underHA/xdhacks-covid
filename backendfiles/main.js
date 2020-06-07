@@ -2,6 +2,7 @@ var main = require('./datarip/main');
 function organizeData(){
   main.organize()
 }
+console.log("test")
 organizeData()
 /*function test(i,j){
   return i
