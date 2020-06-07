@@ -22,16 +22,9 @@ head
     .col-sm
       nav.navbar.navbar-expand-sm.navbar-dark.bg-dark
         .navbar-brand.mb-0.h1
-          i.fas.fa-chart-bar
-          a.navbar-brand(href='https://trekhleb.github.io/covid-19/') COVID-19 Dashboard
+          a.navbar-brand(href='/') < Return home
         button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
           span.navbar-toggler-icon
-        #navbarNav.collapse.navbar-collapse
-          ul.navbar-nav.ml-auto
-            li.nav-item
-              a.nav-link(href='https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6')
-                i.fas.fa-globe-americas
-                |  JHU Dashboard
   .row.mb-1
     .col-sm
       #root
@@ -41,6 +34,8 @@ head
         i.fas.fa-table
         |  Data source: 
         a.text-dark(href='https://github.com/CSSEGISandData/COVID-19') COVID-19 Data Repository by JHU CSSE
+        br
+        a.text-dark(href='/') &copy; UHA @ XdHacks-Covid.
 
 
 

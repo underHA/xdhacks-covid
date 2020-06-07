@@ -59,7 +59,7 @@ head
           header.major
             h2 Inspiration
           p
-            | With rumours of a potential second wave hitting this fall, our team believes that informing the general public of the effectiveness of various Covid-19 countermeasures and policies is a very important task, as doing so allows the public to advocate for the best decisions going forward. By introducing various approaches to tackling Covid-19 and their widely varying success, our tool allows individuals to directly compare the success of one policy with another.
+            | With rumours of a potential second wave hitting this fall, our team believes that informing the general public of the effectiveness of various Covid-19 countermeasures and policies is a very important task, as doing so allows the public to advocate for the best decisions going forward. By visualizing the countries' approaches to tackling Covid-19 and their widely varying success, our tool allows individuals to directly compare the success of one policy with another.
 
         span.image
           img(src='images/lady.jpg' alt='')
@@ -72,7 +72,7 @@ head
           span.icon.major.style3.fa-copy
           h3 Data aggregation
           p
-            | The ability to web-scrape allows our server to compile timestamped policies which, when filtered through mongoDB, provides a thorough yet organized list that can be matched with a country's Covid-19 cases at a particular point in time.
+            | The ability to web-scrape allows our server to compile timestamped policies which provides a thorough yet organized list that can be matched with a country's Covid-19 cases at a particular point in time.
         li
           span.icon.solid.major.style1.fa-code
           h3 Web app integration
@@ -97,13 +97,11 @@ head
       header.major
         h2 Get Started
         p
-          | Before accessing the Covid Policy Tracker web app, please create an account.
+          | Access the Covid Policy Tracker web app by clicking continue.
       footer.major
         ul.actions.special
           li
-            a.button.primary(href='generic.html') Continue
-          li
-            a.button(href='generic.html') Sign up
+            a.button.primary(href='/dashboard') Continue
   // Footer
   footer#footer
     section
@@ -112,14 +110,15 @@ head
         | Please refer to the README.md file on our GitHub repository for a comprehensive list of the sources used.
       ul.actions
         li
-          a.button(href='generic.html') README.md
+          a.button(href='https://github.com/underHA/covid') GitHub
     section
       span.image
           img(src='images/pic07.png' style='height:200px' alt='')
     p.copyright
       | &copy; UHA @ XdHacks-Covid. Design: 
       a(href='https://html5up.net') HTML5 UP
-      | .
+      | . Images: 
+      a(href='https://unsplash.com') Unsplash.
 // Scripts
 script(src='/js/jquery.min.js')
 script(src='/js/jquery.scrollex.min.js')
