@@ -29,6 +29,7 @@ Our World in Data provides our policy data. https://ourworldindata.org/policy-re
 
 Ritchie, Hannah. “Policy Responses to the Coronavirus Pandemic - Statistics and Research.” Policy Responses to the<br/> Coronavirus Pandemic, Our World in Data, ourworldindata.org/policy-responses-covid.<br/><br/>
 
+## Video Link
 Below is the link of our promotional video:<br/>
 https://www.youtube.com/watch?v=WGFpUuf27LQ
 
