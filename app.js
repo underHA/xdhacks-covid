@@ -263,7 +263,6 @@ if (process.env.NODE_ENV === 'development') {
 /**
  * Start Express server.
  */
-const main = require('./backendfiles/main.js');
 app.listen(app.get('port'), () => {
   console.log('%s App is running at http://localhost:%d in %s mode', chalk.green('✓'), app.get('port'), app.get('env'));
   console.log('  Press CTRL-C to stop\n');
