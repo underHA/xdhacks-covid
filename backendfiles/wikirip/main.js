@@ -3,12 +3,13 @@ var formatter = require('./formatter');
 var dateripper = require('./daterip');
 
 var refresh = [true, false]
-var country = "Canada"
+var month = "February"
+var year = "2020"
 
 function organize(){
     if (refresh[0]){
         if(!refresh[1]){
-            ripper.getwiki(country)
+            ripper.getwiki(month,year)
             //rips the page in html format
             refresh[1] = true
         }
@@ -16,7 +17,7 @@ function organize(){
         if (returned!=undefined){
             refresh[0] = false
             organizedarray = formatter.format(ripper.returnwiki())
-            dateripper.pulldate(organizedarray)
+            dateripper.pulldate(organizedarray,year)
         }
     }
 }

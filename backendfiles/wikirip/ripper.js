@@ -1,11 +1,11 @@
 var final = undefined
 
-function getwiki(region='Canada'){
+function getwiki(month="January",year="2020"){
   var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
   let wikiRequest = new XMLHttpRequest();
   
   
-  let url = 'https://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&titles=Timeline_of_the_COVID-19_pandemic_in_'+region;
+  let url = 'https://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&titles=Timeline_of_the_COVID-19_pandemic_in_'+month+"_"+year;
   wikiRequest.open('GET', url)
   wikiRequest.send();
   wikiRequest.onload = function() {

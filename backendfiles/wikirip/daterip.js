@@ -2,54 +2,26 @@ const months = ["January","February","March","April","May","June","July","August
 
 
 
-function monthIndex(string){
-  i = -1
-  for (month of months){
-    thismonth = string.lastIndexOf(month)
-    if(thismonth > i){
-      i = thismonth
-    }
-  }
-  return i
-}
 
-function grabDate(restline){
-  for(var i=0;i<15;i++){
-    if((!isNaN(restline[i-1])&&(restline[i]=="."||restline[i]==","||restline[i]==" "))||i==restline.length){
-      return restline.slice(0,i)
-    }
-  }
-}
-
-
-
-function pulldate(lines){
-  datepulled = {}
+function pulldate(lines,year){
+  currentDate = []
   timeframe = []
+
   for (line of lines){
+    if(line[0]=="EVENTDATE"){
+      dateFix = line[1].split(" ")
 
-    //console.log(line)
-    while(monthIndex(line)!=-1){
-      start = monthIndex(line)
-      if(start!=-1){
-        policyDate = grabDate(line.slice(start,line.length))
-
-        periodposition = line.lastIndexOf(".",start)
-        if(periodposition!=-1){
-          if(policyDate!=undefined){
-            timeframe.push([policyDate,line.slice(periodposition+2,line.length)])
-          }
-          line = line.slice(0,periodposition)
-        }else{
-          if(policyDate!=undefined){
-            timeframe.push([policyDate,line])
-          }
-          break
+      if(dateFix.length==2){
+        if(dateFix.length==2){
+          dateFix.push(year)
         }
-      }else{
-        break
       }
+      currentDate = dateFix
+      continue
     }
+    
+
+    timeframe.push([currentDate,line])
   }
   console.log(timeframe)
 
