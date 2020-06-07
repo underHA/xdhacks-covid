@@ -8,6 +8,8 @@ head
   meta(charset='utf-8')
   meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
   link(rel='stylesheet' href='/css/main2.css')
+  link(rel='shortcut icon', href='/favicon.png')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js')
   noscript
     link(rel='stylesheet' href='/css/noscript.css')
 // Wrapper
@@ -29,7 +31,7 @@ head
   nav#nav
     ul
       li
-        a.active(href='#intro') #Section1
+        a.active(href='#intro') Abstract
       li
         a(href='#first') #Section2
       li
@@ -43,11 +45,10 @@ head
       .spotlight
         .content
           header.major
-            h2 #Section1
+            h2 Abstract
           p
-            | Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
-            | adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
-            | Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.
+            | This website provides a concise and easy-to-understand presentation of the effectiveness of policies put forth by various nations in order to control the Covid-19 outbreak. All information and statistics of various countries are presented in a timeline format. The historical progression of Covid-19 in each country is juxtaposed (might need to find a less difficult word) with policies enacted by the country to control the spread of the virus. The effectiveness of the policies can be conjectured based on changes to the rate of spread of Covid-19.
+
           ul.actions
             li
               a.button(href='generic.html') Learn More
@@ -85,6 +86,9 @@ head
           | Donec imperdiet consequat consequat. Suspendisse feugiat congue
           br
           | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;posuere. Nulla massa urna, fermentum eget quam aliquet.
+
+          <canvas id="line-chart" width="800" height="450"></canvas>
+
       ul.statistics
         li.style1
           span.icon.solid.fa-code-branch

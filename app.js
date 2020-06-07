@@ -2,6 +2,7 @@
  * Module dependencies.
  */
 const express = require('express');
+const Chart = require('chart.js');
 const compression = require('compression');
 const session = require('express-session');
 const bodyParser = require('body-parser');

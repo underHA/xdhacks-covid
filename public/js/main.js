@@ -6,114 +6,46 @@
 
 (function($) {
 
-	var	$window = $(window),
-		$body = $('body'),
-		$main = $('#main');
-
-	// Breakpoints.
-		breakpoints({
-			xlarge:   [ '1281px',  '1680px' ],
-			large:    [ '981px',   '1280px' ],
-			medium:   [ '737px',   '980px'  ],
-			small:    [ '481px',   '736px'  ],
-			xsmall:   [ '361px',   '480px'  ],
-			xxsmall:  [ null,      '360px'  ]
-		});
-
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
-
-	// Nav.
-		var $nav = $('#nav');
-
-		if ($nav.length > 0) {
-
-			// Shrink effect.
-				$main
-					.scrollex({
-						mode: 'top',
-						enter: function() {
-							$nav.addClass('alt');
-						},
-						leave: function() {
-							$nav.removeClass('alt');
-						},
-					});
-
-			// Links.
-				var $nav_a = $nav.find('a');
-
-				$nav_a
-					.scrolly({
-						speed: 1000,
-						offset: function() { return $nav.height(); }
-					})
-					.on('click', function() {
-
-						var $this = $(this);
-
-						// External link? Bail.
-							if ($this.attr('href').charAt(0) != '#')
-								return;
-
-						// Deactivate all links.
-							$nav_a
-								.removeClass('active')
-								.removeClass('active-locked');
-
-						// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
-							$this
-								.addClass('active')
-								.addClass('active-locked');
-
-					})
-					.each(function() {
-
-						var	$this = $(this),
-							id = $this.attr('href'),
-							$section = $(id);
-
-						// No section for this link? Bail.
-							if ($section.length < 1)
-								return;
-
-						// Scrollex.
-							$section.scrollex({
-								mode: 'middle',
-								initialize: function() {
-
-									// Deactivate section.
-										if (browser.canUse('transition'))
-											$section.addClass('inactive');
-
-								},
-								enter: function() {
-
-									// Activate section.
-										$section.removeClass('inactive');
-
-									// No locked links? Deactivate all links and activate this section's one.
-										if ($nav_a.filter('.active-locked').length == 0) {
-
-											$nav_a.removeClass('active');
-											$this.addClass('active');
-
-										}
-
-									// Otherwise, if this section's link is the one that's locked, unlock it.
-										else if ($this.hasClass('active-locked'))
-											$this.removeClass('active-locked');
-
-								}
-							});
-
-					});
-
+	new Chart(document.getElementById("line-chart"), {
+		type: 'line',
+		data: {
+		  labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
+		  datasets: [{ 
+			  data: [86,114,106,106,107,111,133,221,783,2478],
+			  label: "Africa",
+			  borderColor: "#3e95cd",
+			  fill: false
+			}, { 
+			  data: [282,350,411,502,635,809,947,1402,3700,5267],
+			  label: "Asia",
+			  borderColor: "#8e5ea2",
+			  fill: false
+			}, { 
+			  data: [168,170,178,190,203,276,408,547,675,734],
+			  label: "Europe",
+			  borderColor: "#3cba9f",
+			  fill: false
+			}, { 
+			  data: [40,20,10,16,24,38,74,167,508,784],
+			  label: "Latin America",
+			  borderColor: "#e8c3b9",
+			  fill: false
+			}, { 
+			  data: [6,3,2,2,7,26,82,172,312,433],
+			  label: "North America",
+			  borderColor: "#c45850",
+			  fill: false
+			}
+		  ]
+		},
+		options: {
+		  title: {
+			display: true,
+			text: 'World population per region (in millions)'
+		  }
 		}
+	  });
+	  
 
 	// Scrolly.
 		$('.scrolly').scrolly({
