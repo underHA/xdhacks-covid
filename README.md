@@ -2,6 +2,7 @@
 # Covid Policy Tracker (http://www.policytracker.xyz/)<br/>
 by UHA <br/><br/>
 
+![logo](https://github.com/underHA/covid/blob/master/public/images/pic07.png)
 
 Trailer: https://www.youtube.com/watch?v=WGFpUuf27LQ<br/><br/>
 
