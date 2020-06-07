@@ -13,3 +13,9 @@ exports.stellar = (req, res) => {
     title: 'Landing Page'
   });
 };
+
+exports.dashboard = (req, res) => {
+  res.render('dashboard', {
+    title: 'Dashboard'
+  });
+};

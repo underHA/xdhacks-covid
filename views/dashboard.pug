@@ -1,0 +1,62 @@
+doctype html
+head
+  script.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-155058741-2');
+  meta(charset='utf-8')
+  link(rel='shortcut icon' href='favicon.ico' type='image/x-icon')
+  link(rel='icon' href='favicon.ico' type='image/x-icon')
+  title COVID-19 Dashboard
+  meta(name='description' content='Coronavirus (COVID-19) dashboard to show the dynamics of Сoronavirus distribution per country')
+  meta(name='author' content='UHA @ XdHacks-Covid')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  script(src='https://kit.fontawesome.com/4add81f750.js' crossorigin='anonymous')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css' crossorigin='anonymous')
+  link(rel='stylesheet' href='/css/index_dashboard.css')
+.container-fluid
+  .row.mb-1
+    .col-sm
+      nav.navbar.navbar-expand-sm.navbar-dark.bg-dark
+        .navbar-brand.mb-0.h1
+          i.fas.fa-chart-bar
+          a.navbar-brand(href='https://trekhleb.github.io/covid-19/') COVID-19 Dashboard
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarNav.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href='https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6')
+                i.fas.fa-globe-americas
+                |  JHU Dashboard
+  .row.mb-1
+    .col-sm
+      #root
+  .row.mb-4
+    .col-sm
+      small.text-secondary.text-nowrap.mr-3
+        i.fas.fa-table
+        |  Data source: 
+        a.text-dark(href='https://github.com/CSSEGISandData/COVID-19') COVID-19 Data Repository by JHU CSSE
+      small.text-secondary.text-nowrap.mr-3
+        i.fas.fa-bug
+        a.text-dark(href='https://github.com/trekhleb/covid-19/issues') Report issue
+      small.text-secondary.text-nowrap.mr-3
+        i.fab.fa-github
+        a.text-dark(href='https://github.com/trekhleb/covid-19/') Contribute
+// Load dependencies.
+script(src='https://unpkg.com/react@16/umd/react.development.js' crossorigin='')
+script(src='https://unpkg.com/react-dom@16/umd/react-dom.development.js' crossorigin='')
+// <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+// <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js' crossorigin='anonymous')
+script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' crossorigin='anonymous')
+script(src='https://unpkg.com/papaparse@5.1.1/papaparse.min.js' crossorigin='')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js' crossorigin='')
+// Load custom scripts.
+script(src='/js/dashboard/utils.js')
+script(src='/js/dashboard/data.js')
+script(src='/js/dashboard/index.js')
