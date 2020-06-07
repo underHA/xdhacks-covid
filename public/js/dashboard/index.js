@@ -176,7 +176,7 @@ function App() {
 
 function LastUpdatedDate({covidData}) {
   const lastUpdatedDate = getLastUpdatedDate(covidData);
-  return e('small', {className: 'text-muted'},
+  return e('small', {className: 'text-dark'},
     'Last updated: ',
     e('span', {className: 'badge badge-dark'}, lastUpdatedDate)
   );
@@ -461,12 +461,12 @@ function RegionsTable({
       return (
         e('tr', {key: region.key, onClick: () => onRegionChange(region.key)},
           e('td', null, e('input', {type: 'checkbox', checked, onChange: () => {}})),
-          e('td', null, e('small', {className: 'text-muted'}, `#${regionIndex + 1}`)),
+          e('td', null, e('small', {className: 'text-dark'}, `#${regionIndex + 1}`)),
           e('td', null, region.key),
           e('td', null, confirmedNumber),
           e('td', null, recoveredNumber),
           e('td', null, deathsNumber),
-          e('td', null, e('small', {className: 'text-muted'}, mortalityNumber)),
+          e('td', null, e('small', {className: 'text-dark'}, mortalityNumber)),
         )
       );
     });
@@ -476,13 +476,13 @@ function RegionsTable({
       e('div', {className: 'table-responsive covid-data-table-wrapper'},
         e('table', {className: 'table table-hover'}, tHead, tBody)
       ),
-      e('small', {className: 'text-muted'}, '* Table is scrollable')
+      e('small', {className: 'text-dark'}, '* Table is scrollable')
     )
   );
 }
 
 function ColumnSorter({sortDirection}) {
-  const className = sortDirection ? 'ml-2' : 'ml-2 text-muted';
+  const className = sortDirection ? 'ml-2' : 'ml-2 text-dark';
   let sorter = null;
   if (!sortDirection) {
     sorter = e('i', {className: 'fas fa-sort'});
