@@ -15,6 +15,10 @@ With rumours of a potential second wave hitting this fall, our team believes tha
 ## Data Visualization<br/>
 Once entering the tracker page, a graph with confirmed, recovered, and deaths from Covid-19 will appear, along with vertical red lines. Each vertical line represents a day when a certain policy was enacted. For example, you can see that on March 12th, Poland set their internal movement restriction policy to level 1 (recommended restriction), while Puerto Rico and Ukraine set theirs to level 2. We hope that by filtering through different countries and seeing what policies they have enacted, it would be easier for the public to look at the chart and get an idea of which policies are effective. However, we do not encourage individuals to interpret their own data and go against government orders.<br/><br/>
 
+## Why is this needed<br/>
+It’s no secret that many countries have been attempting to reduce and eliminate those victim to covid-19. Governments have enacted various restrictions on civilians by closing workplaces, schools, and even public events, hence why this event had to be held online. As much as some people may be annoyed that they can’t go outside to play with friends, or are unable to work due to their job not being deemed “essential”, we must realize that social distancing and these policies do in fact work, and citizen cooperation is required to flatten the curve. We hope that by showing each policy and their outcomes, people may have an understanding of why it’s important to listen to government orders, possibly preventing a larger outbreak.
+
+
 ## How we built it: <br/>
 Web App: The frontend is built with bootstrap and integrated with our Express server to send data to the browser. The Chart.js library was used to display our data points. Web app is deployed on Heroku.<br/>
 Data collection: Using data collected from John Hopkins University, the web app is able to visualize current Covid figures. Policy data is obtained through web-scraping.<br/><br/>
