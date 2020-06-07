@@ -28,100 +28,80 @@ head
   nav#nav
     ul
       li
-        a.active(href='#intro') Abstract
+        a.active(href='#abstract') Abstract
       li
-        a(href='#first') #Section2
+        a(href='#inspiration') Inspiration
       li
-        a(href='#second') #Section3
+        a(href='#first') How It Works
+      li
+        a(href='#second') Demo
       li
         a(href='#cta') Get Started
   // Main
   #main
     // Introduction
-    section#intro.main
+    section#abstract.main
       .spotlight
         .content
           header.major
             h2 Abstract
           p
-            | The Covid Policy Tracker provides a concise and easy-to-understand visualization of the policies put forth by various nations to control the Covid-19 outbreak. All of the aggregated statistics are presented in a timeline format. The historical progression of Covid-19 in each country is compared with the policies enacted by the country to control the spread of the virus. The effectiveness of the policies can be roughly concluded by an algorithm that considers the changes to the rate of spread of Covid-19 after the incubation period.
+            | The Covid Policy Tracker provides a concise and easy-to-understand visualization of the policies put forth by various nations to control the Covid-19 outbreak. All of the aggregated statistics are presented in a timeline format. The historical progression of Covid-19 in each country is compared with the policies enacted by the country to control the spread of the virus. The effectiveness of the policies can be roughly concluded by an algorithm that considers the changes to the rate of spread of Covid-19 after the incubation period has passed.
 
         span.image
           img(src='images/pic01.jpg' alt='')
+    // Inspiration
+    section#inspiration.main
+      .spotlight
+        .content
+          header.major
+            h2 Inspiration
+          p
+            | With rumours of a potential second wave hitting this fall, our team believes that informing the general public of the effectiveness of various Covid-19 countermeasures and policies is a very important task, as doing so allows the public to advocate for the best decisions going forward. By introducing various approaches to tackling Covid-19 and their widely varying success, our tool allows individuals to directly compare the success of one policy with another.
+
+        span.image
+          img(src='images/lady.jpg' alt='')
     // First Section
     section#first.main.special
       header.major
-        h2 #Section2
+        h2 How it works
       ul.features
         li
-          span.icon.solid.major.style1.fa-code
-          h3 #Section2-1
-          p
-            | Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.
-        li
           span.icon.major.style3.fa-copy
-          h3 #Section2-2
+          h3 Data aggregation
           p
-            | Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.
+            | The ability to web-scrape allows our server to compile timestamped policies which, when filtered through mongoDB, provides a thorough yet organized list that can be matched with a country's Covid-19 cases at a particular point in time.
+        li
+          span.icon.solid.major.style1.fa-code
+          h3 Web app integration
+          p
+            | Once the data is compiled, our server makes an HTTP request to send the readable data to the browser so that it can be visually displayed. 
         li
           span.icon.major.style5.fa-gem
-          h3 #Section2-3
+          h3 Frameworks
           p
-            | Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.
-      footer.major
-        ul.actions.special
-          li
-            a.button(href='generic.html') Learn More
+            | The graphs are constructed with the Chart.js library to allow accessibility from a wide range of devices. Our website is hosted on Heroku to support simpler integration with our Node.js/Express application.
     // Second Section
     section#second.main.special
       header.major
-        h2 #Section3
+        h2 Demo
         p
-          | Donec imperdiet consequat consequat. Suspendisse feugiat congue
-          br
-          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;posuere. Nulla massa urna, fermentum eget quam aliquet.
+          | View a demonstration of how the Covid Policy Tracker works.
 
-      ul.statistics
-        li.style1
-          span.icon.solid.fa-code-branch
-          strong 5,120
-          |  Etiam
-        li.style2
-          span.icon.fa-folder-open
-          strong 8,192
-          |  Magna
-        li.style3
-          span.icon.solid.fa-signal
-          strong 2,048
-          |  Tempus
-        li.style4
-          span.icon.solid.fa-laptop
-          strong 4,096
-          |  Aliquam
-        li.style5
-          span.icon.fa-gem
-          strong 1,024
-          |  Nullam
-      p.content
-        | Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.
-      footer.major
-        ul.actions.special
-          li
-            a.button(href='generic.html') Learn More
+        iframe(width='560' height='315' src='https://www.youtube-nocookie.com/embed/4KigFRmr8qM' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+
     // Get Started
     section#cta.main.special
       header.major
         h2 Get Started
         p
-          | Donec imperdiet consequat consequat. Suspendisse feugiat congue
-          br
-          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;posuere. Nulla massa urna, fermentum eget quam aliquet.
+          | Before accessing the Covid Policy Tracker web app, please create an account.
       footer.major
         ul.actions.special
           li
-            a.button.primary(href='generic.html') Get Started
+            a.button.primary(href='generic.html') Continue
           li
-            a.button(href='generic.html') Learn More
+            a.button(href='generic.html') Sign up
   // Footer
   footer#footer
     section
